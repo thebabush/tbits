@@ -4,6 +4,10 @@ Three-valued bits and bitvectors for python 3, including per-bit taint data.
 
 Idea taken from [Rolf Rolles](https://www.msreverseengineering.com).
 
+## Install
+
+`pip install git+https://github.com/thebabush/tbits`
+
 ## Example
 
 ```py
