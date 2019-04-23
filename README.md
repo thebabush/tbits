@@ -28,10 +28,14 @@ print(abc * tbits.TBitVector.from_integer(0b100, 8))
 # T[X{A},O,X{C,x},O,O,O,O,O]
 print(abc & tbits.tbits('10x', 8))
 
-# TODO: user `x` as value instead of tag? This would make `x ^ x == 0` true.
+# TODO: use `x` as value instead of reference? This would make `x ^ x == 0` true.
 # For now, though...
 # T[X{x}]
 print(tbits.tbits('x') ^ tbits.tbits('x'))
+
+x = tbits.tbits('x', 1)
+# T[O]
+print(x ^ x)
 
 # False
 print(abc.is_concrete())
