@@ -32,5 +32,20 @@ print(abc & tbits.tbits('10x', 8))
 # For now, though...
 # T[X{x}]
 print(tbits.tbits('x') ^ tbits.tbits('x'))
+
+# False
+print(abc.is_concrete())
+
+# T[X{t0},X{t1},X{t2},X{t3},X{t4},X{t5},X{t6},X{t7}]
+print(tbits.TBitVector.from_unknown(8))
+
+# T[X{t8},X{t9},X{tA},X{tB},X{tC},X{tD},X{tE},X{tF}]
+print(tbits.TBitVector.from_unknown(8))
+
+# 7
+print(abc.x2i())
+
+# T[X{a},X{b},X{c},X{c},X{c},X{c},X{c},X{c}]
+print(tbits.tbits('abc', 3).sx(8))
 ```
 
